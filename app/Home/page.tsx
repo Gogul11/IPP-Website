@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Scene from "@/components/Scene";
 import React from "react";
 
 const Page = () => {
@@ -8,7 +9,7 @@ const Page = () => {
 			<div
 				
 			>
-				yet to be styled
+				<Scene/>
 			</div>
 		</div>
 		<div className="h-full w-[50%] flex flex-col items-center justify-center gap-4 max-md:w-full max-md:h-[50%] mb-10">
