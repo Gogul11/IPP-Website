@@ -17,9 +17,9 @@ const Navbar : React.FC<props> = ({ style })=> {
 
     return (
         <div
-			className={` bg-[#007acc] h-20 md:rounded-3xl mx-10 max-md:h-15 ${style}`}
+			className={` bg-white/20 h-20 md:rounded-3xl mx-10 max-md:h-15 ${style}`}
 			style={{
-				boxShadow: "1px 0px 73px 8px rgba(0,0,0,0.6) inset"
+				boxShadow: "1px 0px 73px 8px rgba(0,0,0,0.9) inset"
 			}}
 		>
 			<div className="flex justify-evenly h-full items-center">
@@ -27,7 +27,7 @@ const Navbar : React.FC<props> = ({ style })=> {
 					links.map((item, idx) => (
 						<Link
 							key={idx}
-							className="cursor-pointer"
+							className="cursor-pointer max-md:text-xs"
 							href={item.link}
 						>
 							{item.name}

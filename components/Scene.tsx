@@ -76,18 +76,18 @@ const Scene = () => {
 
             const infGeometry = createInfinityGeometry();
             const material = new THREE.MeshStandardMaterial({
-                color : '#00ffff',
+                color : '#ffffff',
                 metalness : 0.3,
                 roughness : 0.3,
-                emissive: '#00ffff',
+                emissive: '#ffffff',
                 emissiveIntensity: 1.2
             })
             const mesh = new THREE.Mesh(infGeometry, material);
             scene.add(mesh)
 
-            const ambientLight = new THREE.AmbientLight(0x00ffff, 0.5);
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
             scene.add(ambientLight);
-            const dirLight = new THREE.DirectionalLight(0x00ffff, 0.5);
+            const dirLight = new THREE.DirectionalLight(0xffffff, 0.5);
             dirLight.position.set(5, 10, 5);
             scene.add(dirLight);
 
