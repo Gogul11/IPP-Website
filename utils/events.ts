@@ -1,7 +1,7 @@
 export const events = [
   {
     "name": "Tech Innovators Meetup",
-    "description": "A meetup for students to discuss the latest tech trends and innovations.",
+    "description": "A meetup for students to discuss the latest tech trends and innovations.A meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovationsA meetup for students to discuss the latest tech trends and innovations",
     "date": "2025-10-05",
     "time": "18:00",
     "members": 50,
