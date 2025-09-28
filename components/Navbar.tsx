@@ -1,19 +1,23 @@
 'use client'
 
 import Link from "next/link"
+import React from "react"
 
-const Navbar = () => {
+interface props {
+	style : string
+}
+const Navbar : React.FC<props> = ({ style })=> {
 	
 	const links = [
 		{ name : 'HOME', link : '/' },
-		{ name : 'EVENTS', link : 'events'},
+		{ name : 'EVENTS', link : '/events'},
 		{ name : 'ABOUT US', link : '/about'},
-		{ name : 'CONTACT US', link : 'contact'}
+		{ name : 'CONTACT US', link : '/contact'}
 	]
 
     return (
         <div
-			className="w-[50%] bg-white/20 h-20 md:rounded-3xl fixed bottom-4 md:right-0 mx-10 max-md:w-full max-md:bottom-0 max-md:h-15 shadow-2xl"
+			className={` bg-[#007acc] h-20 md:rounded-3xl mx-10 max-md:h-15 ${style}`}
 			style={{
 				boxShadow: "1px 0px 73px 8px rgba(0,0,0,0.6) inset"
 			}}
