@@ -4,7 +4,7 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div className="h-full w-full flex items-center bg-black text-white max-md:flex-col pt-30">
+    <div className="h-full w-full flex items-center bg-black text-white max-md:flex-col ">
 		<div className="h-full w-[50%] flex justify-center items-center max-md:w-full max-md:h-[50%]">
 			<div>
 				<Scene/>

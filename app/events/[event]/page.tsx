@@ -1,34 +1,38 @@
 'use client'
 
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import React from 'react';
 import { events } from '@/utils/events';
-import Navbar from '@/components/Navbar';
-import { CalendarDays, Clock8, Users, MapPin, IndianRupee, PhoneCall } from 'lucide-react';
+import { CalendarDays, Clock8, Users, MapPin, IndianRupee, PhoneCall, ChevronLeft  } from 'lucide-react';
 
 const EventPage = () => {
   const params = useParams();
   const eventId = Number(params.event);
-
+  const router = useRouter()
   return (
-    <div className="min-h-screen w-full bg-black text-white flex flex-col items-center p-4 max-md:p-2">
+    <div className="h-full w-full bg-black text-white">
 
-      <Navbar style="w-[50%] max-md:w-full fixed bottom-4 max-md:bottom-0 max-md:top-0" />
+      <ChevronLeft 
+        className='fixed text-white top-5 left-5 bg-black/20 rounded-[50%] h-7 w-7 cursor-pointer md:h-10 md:w-10'
+        onClick={() => router.back()}
+      />
 
-      {/* Event Card */}
-      <div className="flex flex-col md:flex-row w-[70%] max-md:w-full  bg-white/10 rounded-2xl overflow-hidden mt-24 md:mt-16 shadow-lg">
-        
-        {/* Image */}
-        <div className="w-full md:w-1/2 h-64 md:h-auto">
+      <div className='flex flex-col h-full w-full md:flex-row'>        
+        <div className="w-full h-[40%] md:h-full">
           <img
-            src="https://placehold.co/600x400"
+            src="/image.png"
             alt="event"
             className="object-cover w-full h-full"
           />
         </div>
 
         {/* Event Details */}
-        <div className="w-full md:w-1/2 flex flex-col gap-6 p-6 justify-center">
+        <div 
+            className="w-full p-6 bg-white/10 h-[60%] max-md:rounded-t-4xl md:h-full flex flex-col gap-4 md:gap-6 md:pl-10 overflow-auto"
+            style={{
+              boxShadow: "0px 10px 200px 50px rgba(0,0,0,0.71)"
+            }}
+        >
             <h2 className="text-2xl md:text-3xl font-bold text-center md:text-left">
                 {events[eventId].name}
             </h2>
@@ -37,7 +41,7 @@ const EventPage = () => {
             </p>
 
           {/* Info Section using flex */}
-            <div className="flex flex-row max-md:flex-col gap-4 mt-4">
+            <div className="flex flex-col gap-4 mt-4">
                 <div className="flex flex-col gap-3 md:w-1/2">
                 <p className="flex items-center gap-3">
                     <CalendarDays /> {events[eventId].date}

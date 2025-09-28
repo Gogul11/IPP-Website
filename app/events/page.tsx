@@ -56,7 +56,7 @@ const Events = () => {
             <p className="text-sm text-gray-300 mb-4">
               <span className="font-medium">Location:</span> {event.location}
             </p>
-            <p className="text-gray-200">{event.description}</p>
+            <p className="text-gray-200 truncate">{event.description}</p>
           </Link>
         ))}
       </div>
