@@ -41,7 +41,7 @@ const Events = () => {
       </div>
 
       {/* Events Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {filteredEvents.map((event, idx) => (
           <Link
             key={idx}
