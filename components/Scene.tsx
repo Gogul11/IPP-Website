@@ -54,6 +54,10 @@ const Scene = () => {
 
             const renderer = new THREE.WebGLRenderer({antialias : true})
             renderer.setSize(width, height)
+            
+            if (divRef.current?.firstChild) {
+              divRef.current.removeChild(divRef.current.firstChild);
+            }
             divRef.current?.appendChild(renderer.domElement);
 
             const fov = 75
@@ -108,7 +112,7 @@ const Scene = () => {
             }
             renderer.setAnimationLoop( animate );
 
-            
+
 
         }
     }, [])
