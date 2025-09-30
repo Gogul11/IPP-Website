@@ -17,7 +17,7 @@ const Navbar : React.FC<props> = ({ style })=> {
 
     return (
         <div
-			className={` bg-white/20 h-20 md:rounded-3xl mx-10 max-md:h-15 ${style}`}
+			className={` bg-white/20 h-20 md:rounded-3xl mx-10 max-md:h-15 backdrop-blur-md ${style}`}
 			style={{
 				boxShadow: "1px 0px 73px 8px rgba(0,0,0,0.9) inset"
 			}}
