@@ -4,10 +4,10 @@ import { aboutUsContent } from "@/utils/aboutusContent";
 
 const AboutUs = () => {
   return (
-    <div className="h-full w-full bg-black text-white flex flex-col items-center p-6 gap-5 ">
+    <div className="h-full w-full bg-black text-white flex flex-col items-center p-6 gap-5 max-md:p-4">
     	<Navbar style="w-[50%] max-md:w-full fixed bottom-4 max-md:bottom-0 z-50"/>
 
-		<div className="flex  w-[80%] gap-8 items-center justify-center p-4 max-md:flex-col">
+		<div className="flex  w-[80%] gap-8 items-center justify-center  max-md:flex-col">
 			<div className="w-[50%]  flex justify-center max-md:w-full">
 				<img src="/image.png" className="h-100 w-100" alt="ISTA image" />
 			</div>
@@ -27,7 +27,7 @@ const AboutUs = () => {
 				</p>
 			</div>
 		</div>
-		<hr className="text-white w-[80%]" color="white"/>
+		<hr className="text-white w-[80%] max-md:w-[90%]" color="white"/>
 		<div className=" w-[80%] flex flex-row-reverse gap-8 items-center justify-center  pb-32 max-md:flex-col">
 			<div className="w-[50%]  flex justify-center max-md:w-full">
 				<img src="/image.png" className="h-100 w-100" alt="I++ image" />
@@ -39,7 +39,13 @@ const AboutUs = () => {
 				>I++</p>
 				<p
 					className="lg:text-xl text-center md:text-lg text-md"
-				>{aboutUsContent.content2}</p>
+				>{aboutUsContent.content2} 
+					<a
+						href="https://istaceg.in/"
+						target="_blank"
+						className="text-blue-500 mx-2 cursor-pointer"
+					>Brouchore</a>
+				</p>
 			</div>
 		</div>
 		
