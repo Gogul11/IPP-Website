@@ -41,7 +41,7 @@ const Page = () => {
 					<span className="dot animate-wave-delay3 text-4xl max-md:text-2xl">.</span>
 				</span>
 			</p>
-
+			<p className="font-medium text-xl">"We won't stop until ISTA reaches where vision meets infinity."</p>
 		</div>
 		
 		<Navbar style="w-[50%] max-md:w-full fixed bottom-4 md:right-0 max-md:bottom-0"/>
