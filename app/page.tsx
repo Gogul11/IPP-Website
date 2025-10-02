@@ -15,7 +15,7 @@ const Page = () => {
 				<p
 					className="text-[200px] max-md:text-7xl max-lg:text-8xl"
 					style={{
-						color: "black",
+						color: "white",
 						textShadow: "0 0 10px white, 0 0 10px white, 0 0 20px white"
 					}}
 				>
@@ -24,7 +24,7 @@ const Page = () => {
 				<p 
 					className="text-9xl max-md:text-7xl max-lg:text-8xl"
 					style={{
-						color: "black",
+						color: "white",
 						textShadow: "0 0 10px white, 0 0 10px white, 0 0 20px white"
 					}}
 				>
