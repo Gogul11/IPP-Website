@@ -14,6 +14,12 @@ const Events = () => {
     ? events 
     : events.filter((event : Event) => event.category === filter);
 
+  const filterButtons: { label: string; value: 'all' | 'tech' | 'non-tech' | 'big-show' }[] = [
+      { label: 'All Events', value: 'all' },
+      { label: 'Tech Events', value: 'tech' },
+      { label: 'Non-Tech Events', value: 'non-tech' },
+      { label: 'Big Shows', value: 'big-show' },
+    ];
   return (
     <div className="h-full w-full bg-black text-white flex flex-col items-center max-md:pb-30 p-4 pt-25">
       
@@ -22,15 +28,10 @@ const Events = () => {
 
       {/* Filter Buttons */}
       <div className="flex gap-4 mb-8 flex-wrap justify-center ">
-        {[
-          { label: 'All Events', value: 'all' },
-          { label: 'Tech Events', value: 'tech' },
-          { label: 'Non-Tech Events', value: 'non-tech' },
-          { label: 'Big Shows', value: 'big-show' },
-        ].map(btn => (
+       {filterButtons.map((btn)  => (
           <button
             key={btn.value}
-            onClick={() => setFilter(btn.value as any)}
+            onClick={() => setFilter(btn.value)}
             className={`px-4 py-2 rounded-lg font-semibold cursor-pointer transition-all duration-300 ${
               filter === btn.value
                 ? 'bg-white text-black'
