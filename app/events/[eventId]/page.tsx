@@ -4,6 +4,7 @@ import { useParams, useRouter } from 'next/navigation';
 import React from 'react';
 import { events } from '@/utils/events';
 import { CalendarDays, Clock8, Users, MapPin, IndianRupee, PhoneCall, ChevronLeft  } from 'lucide-react';
+import Image from 'next/image';
 
 const EventPage = () => {
   
@@ -21,7 +22,7 @@ const EventPage = () => {
 
       <div className='flex flex-col h-[70%] w-[70%] md:flex-row max-md:h-full max-md:w-full'>        
         <div className="w-full h-[40%] md:h-full">
-          <img
+          <Image
             src="/image.png"
             alt="event"
             className="object-cover w-full h-full md:rounded-l-4xl"
