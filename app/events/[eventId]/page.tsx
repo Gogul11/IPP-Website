@@ -9,7 +9,7 @@ import Image from 'next/image';
 const EventPage = () => {
   
   const { eventId } = useParams();
-  const event = events.find(e => e.id === eventId)
+  const event  = events.find((e : any) => e.id === eventId)
   const router = useRouter()
 
   return (
