@@ -28,7 +28,7 @@ const Page = () => {
 						textShadow: "0 0 10px white, 0 0 10px white, 0 0 20px white"
 					}}
 				>
-					' 25
+					{`' 25`}
 				</p>
 			</div>
 			<p

@@ -5,11 +5,12 @@ import React from 'react';
 import { events } from '@/utils/events';
 import { CalendarDays, Clock8, Users, MapPin, IndianRupee, PhoneCall, ChevronLeft  } from 'lucide-react';
 import Image from 'next/image';
+import { Event } from '@/types/eventType';
 
 const EventPage = () => {
   
   const { eventId } = useParams();
-  const event = events.find(e => e.id === eventId)
+  const event : Event | undefined = events.find((e : Event) => e.id === eventId)
   const router = useRouter()
 
   return (

@@ -5,13 +5,14 @@ import React, { useState } from 'react';
 import { events } from '@/utils/events';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
+import { Event } from '@/types/eventType';
 
 const Events = () => {
   const [filter, setFilter] = useState<'all' | 'tech' | 'non-tech' | 'big-show'>('all');
 
-  const filteredEvents = filter === 'all' 
+  const filteredEvents : Event[] = filter === 'all' 
     ? events 
-    : events.filter(event => event.category === filter);
+    : events.filter((event : Event) => event.category === filter);
 
   return (
     <div className="h-full w-full bg-black text-white flex flex-col items-center max-md:pb-30 p-4 pt-25">
