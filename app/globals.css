@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import "tailwindcss";
+
+
+*{
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body{
+  background-color: black;
+}
+
+.dot {
+  display: inline-block;
+  transform: translateY(0);
+}
+
+@keyframes wave {
+  0%, 60%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-wave-delay1 {
+  animation: wave 1s infinite ease-in-out;
+}
+
+.animate-wave-delay2 {
+  animation: wave 1s infinite ease-in-out 0.2s;
+}
+
+.animate-wave-delay3 {
+  animation: wave 1s infinite ease-in-out 0.4s;
+}
