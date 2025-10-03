@@ -1,4 +1,6 @@
-export const events = [
+import { Event } from "@/types/eventType";
+
+export const events : Event[] = [
   {
     id: "tech1",
     name: "Tech Innovators Meetup",
