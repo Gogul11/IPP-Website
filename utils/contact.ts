@@ -1,18 +1,19 @@
 export const members = [
     {
-        name : "Gogul",
-        post : "Chairperson",
-        number : "999994444"
+        name : "Arun Karthick S",
+        post : "Chair Person",
+        number : "63831 18124"
+
     },
     {
-        name : "Gogul A",
-        post : "Head of Department",
-        number : "9999888888"
+        name : "Ajay Kumar R",
+        post : "Overall Coordinator",
+        number : "95002 02444"
     },
     {
-        name : "Lugog",
-        post : "Staff coordinator",
-        number : "999900088"
+        name : "Padma Prabha M",
+        post : "Treasurer",
+        number : "82204 66177"
     }
 
 ]

@@ -12,10 +12,10 @@ const EventPage = () => {
   const router = useRouter()
 
   return (
-    <div className="h-full w-full bg-black text-white flex md:justify-center md:items-center">
+    <div className="h-full w-full bg-black text-white flex md:justify-center md:items-center pt-20">
 
       <ChevronLeft 
-        className='fixed text-white top-5 left-5 bg-black/20 rounded-[50%] h-7 w-7 cursor-pointer md:h-10 md:w-10'
+        className='fixed text-white top-25 left-5 bg-black/20 rounded-[50%] h-7 w-7 cursor-pointer md:h-10 md:w-10'
         onClick={() => router.back()}
       />
 
