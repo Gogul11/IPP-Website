@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { events } from '@/utils/events';
 import Navbar from '@/components/Navbar';
+import Image from 'next/image';
 
 const Events = () => {
   const [filter, setFilter] = useState<'all' | 'tech' | 'non-tech' | 'big-show'>('all');
@@ -48,7 +49,7 @@ const Events = () => {
             className="group relative flex flex-col items-center bg-white/10 rounded-2xl border border-white/20 p-6 shadow-lg w-full sm:w-[48%] lg:w-[30%] hover:shadow-2xl transition-shadow duration-300"
           >
             {/* Event Image */}
-            <img
+            <Image
               src="/image.png"
               alt={event.name}
               className="h-56 w-56 object-cover"

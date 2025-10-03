@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
-import Scene from '@/components/Scene';
 import { PhoneCall, Instagram, Linkedin, Mail } from 'lucide-react';
 import { members } from '@/utils/contact';
 
@@ -16,7 +15,7 @@ const Contact = () => {
                     className='text-4xl font-bold underline'
                 >Contact Us</p>
 
-                <p className='font-medium text-xl'>"Join the loop. Be part of infinity."</p>
+                <p className='font-medium text-xl'>{`"Join the loop. Be part of infinity."`}</p>
 
                 <div className='flex flex-col gap-8 w-full items-center'>
                     {members.map((item, idx) => (
