@@ -13,7 +13,7 @@ const Events = () => {
     : events.filter(event => event.category === filter);
 
   return (
-    <div className="h-full w-full bg-black text-white flex flex-col items-center max-md:pb-30 p-4">
+    <div className="h-full w-full bg-black text-white flex flex-col items-center max-md:pb-30 p-4 pt-25">
       
       
       <Navbar style="w-[50%] max-md:w-full fixed bottom-4 max-md:bottom-0 z-50"/>
@@ -29,7 +29,7 @@ const Events = () => {
           <button
             key={btn.value}
             onClick={() => setFilter(btn.value as any)}
-            className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
+            className={`px-4 py-2 rounded-lg font-semibold cursor-pointer transition-all duration-300 ${
               filter === btn.value
                 ? 'bg-white text-black'
                 : 'bg-white/10 text-white hover:bg-white/20'

@@ -4,7 +4,7 @@ import { aboutUsContent } from "@/utils/aboutusContent";
 
 const AboutUs = () => {
   return (
-    <div className="h-full w-full bg-black text-white flex flex-col items-center p-6 gap-5 max-md:p-4">
+    <div className="h-full w-full bg-black text-white flex flex-col items-center p-6 gap-5 max-md:p-4 pt-25 max-md:pt-25">
     	<Navbar style="w-[50%] max-md:w-full fixed bottom-4 max-md:bottom-0 z-50"/>
 
 		<div className="flex  w-[80%] gap-8 items-center justify-center  max-md:flex-col">
@@ -40,11 +40,6 @@ const AboutUs = () => {
 				<p
 					className="lg:text-xl text-center md:text-lg text-md"
 				>{aboutUsContent.content2} 
-					<a
-						href="https://istaceg.in/"
-						target="_blank"
-						className="text-blue-500 mx-2 cursor-pointer"
-					>Brouchore</a>
 				</p>
 			</div>
 		</div>

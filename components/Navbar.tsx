@@ -31,7 +31,7 @@ const Navbar : React.FC<props> = ({ style })=> {
 						<Link
 							key={idx}
 							className={`cursor-pointer max-md:text-xs text-sm ${
-								pathname === item.link ? "text-blue-500 font-semibold" : "text-white"
+								pathname === item.link ? "text-blue-500 font-semibold underline" : "text-white"
 							}`}
 							href={item.link}
 						>
