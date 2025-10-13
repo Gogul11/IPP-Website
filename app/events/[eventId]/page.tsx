@@ -26,6 +26,8 @@ const EventPage = () => {
           <Image
             src="/image.png"
             alt="event"
+            width={500}
+            height={400}
             className="object-cover w-full h-full md:rounded-l-4xl"
           />
         </div>
@@ -40,8 +42,7 @@ const EventPage = () => {
             <p className="text-2xl md:text-3xl font-bold text-center md:text-left">
                 {event?.name}
             </p>
-            <p className="text-base md:text-lg text-center md:text-left">
-                {event?.description}
+            <p className="text-base md:text-lg text-center md:text-left" dangerouslySetInnerHTML={{ __html: event?.description || ""}}>
             </p>
 
           {/* Info Section using flex */}
@@ -51,7 +52,7 @@ const EventPage = () => {
                       <CalendarDays /> {event?.date}
                   </p>
                   <p className="flex items-center gap-4 text-xl">
-                      <Clock8 /> {event?.time}
+                      <Clock8 size={20}/> {event?.time}
                   </p>
                   <p className="flex items-center gap-4 text-xl">
                       <Users /> {event?.members} members

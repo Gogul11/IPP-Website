@@ -54,6 +54,8 @@ const Events = () => {
             <Image
               src="/image.png"
               alt={event.name}
+              width={224}
+              height={224}
               className="h-56 w-56 object-cover"
             />
 

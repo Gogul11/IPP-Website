@@ -4,7 +4,7 @@ export interface Event {
   description: string;
   date: string;        // could also be Date if you parse it
   time: string;        // keep as string if you’re displaying only
-  members: number;
+  members: string;
   location: string;
   prizePool: string;
   inChargeName: string;
