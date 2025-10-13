@@ -4,14 +4,22 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { events } from '@/utils/events';
 import Navbar from '@/components/Navbar';
+import Image from 'next/image';
+import { Event } from '@/types/eventType';
 
 const Events = () => {
   const [filter, setFilter] = useState<'all' | 'tech' | 'non-tech' | 'big-show'>('all');
 
-  const filteredEvents = filter === 'all' 
+  const filteredEvents : Event[] = filter === 'all' 
     ? events 
-    : events.filter(event => event.category === filter);
+    : events.filter((event : Event) => event.category === filter);
 
+  const filterButtons: { label: string; value: 'all' | 'tech' | 'non-tech' | 'big-show' }[] = [
+      { label: 'All Events', value: 'all' },
+      { label: 'Tech Events', value: 'tech' },
+      { label: 'Non-Tech Events', value: 'non-tech' },
+      { label: 'Big Shows', value: 'big-show' },
+    ];
   return (
     <div className="h-full w-full bg-black text-white flex flex-col items-center max-md:pb-30 p-4 pt-25">
       
@@ -20,15 +28,10 @@ const Events = () => {
 
       {/* Filter Buttons */}
       <div className="flex gap-4 mb-8 flex-wrap justify-center ">
-        {[
-          { label: 'All Events', value: 'all' },
-          { label: 'Tech Events', value: 'tech' },
-          { label: 'Non-Tech Events', value: 'non-tech' },
-          { label: 'Big Shows', value: 'big-show' },
-        ].map(btn => (
+       {filterButtons.map((btn)  => (
           <button
             key={btn.value}
-            onClick={() => setFilter(btn.value as any)}
+            onClick={() => setFilter(btn.value)}
             className={`px-4 py-2 rounded-lg font-semibold cursor-pointer transition-all duration-300 ${
               filter === btn.value
                 ? 'bg-white text-black'
@@ -48,9 +51,11 @@ const Events = () => {
             className="group relative flex flex-col items-center bg-white/10 rounded-2xl border border-white/20 p-6 shadow-lg w-full sm:w-[48%] lg:w-[30%] hover:shadow-2xl transition-shadow duration-300"
           >
             {/* Event Image */}
-            <img
+            <Image
               src="/image.png"
               alt={event.name}
+              width={224}
+              height={224}
               className="h-56 w-56 object-cover"
             />
 

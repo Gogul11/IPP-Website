@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import { aboutUsContent } from "@/utils/aboutusContent";
+import Image from "next/image";
 
 const AboutUs = () => {
   return (
@@ -9,7 +10,7 @@ const AboutUs = () => {
 
 		<div className="flex  w-[80%] gap-8 items-center justify-center  max-md:flex-col">
 			<div className="w-[50%]  flex justify-center max-md:w-full">
-				<img src="/image.png" className="h-100 w-100" alt="ISTA image" />
+				<Image src="/image.png" className="h-100 w-100" alt="ISTA image" />
 			</div>
 
 			<div className="w-[50%] flex flex-col gap-8 justify-center items-center max-md:w-full ">
@@ -30,7 +31,7 @@ const AboutUs = () => {
 		<hr className="text-white w-[80%] max-md:w-[90%]" color="white"/>
 		<div className=" w-[80%] flex flex-row-reverse gap-8 items-center justify-center  pb-32 max-md:flex-col">
 			<div className="w-[50%]  flex justify-center max-md:w-full">
-				<img src="/image.png" className="h-100 w-100" alt="I++ image" />
+				<Image src="/image.png" className="h-100 w-100" alt="I++ image" />
 			</div>
 
 			<div className="w-[50%] flex flex-col gap-8 justify-center items-center max-md:w-full ">

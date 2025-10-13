@@ -4,11 +4,13 @@ import { useParams, useRouter } from 'next/navigation';
 import React from 'react';
 import { events } from '@/utils/events';
 import { CalendarDays, Clock8, Users, MapPin, IndianRupee, PhoneCall, ChevronLeft  } from 'lucide-react';
+import Image from 'next/image';
+import { Event } from '@/types/eventType';
 
 const EventPage = () => {
   
   const { eventId } = useParams();
-  const event = events.find(e => e.id === eventId)
+  const event : Event | undefined = events.find((e : Event) => e.id === eventId)
   const router = useRouter()
 
   return (
@@ -21,9 +23,11 @@ const EventPage = () => {
 
       <div className='flex flex-col h-[70%] w-[70%] md:flex-row max-md:h-full max-md:w-full'>        
         <div className="w-full h-[40%] md:h-full">
-          <img
+          <Image
             src="/image.png"
             alt="event"
+            width={500}
+            height={400}
             className="object-cover w-full h-full md:rounded-l-4xl"
           />
         </div>
@@ -38,8 +42,7 @@ const EventPage = () => {
             <p className="text-2xl md:text-3xl font-bold text-center md:text-left">
                 {event?.name}
             </p>
-            <p className="text-base md:text-lg text-center md:text-left">
-                {event?.description}
+            <p className="text-base md:text-lg text-center md:text-left" dangerouslySetInnerHTML={{ __html: event?.description || ""}}>
             </p>
 
           {/* Info Section using flex */}
@@ -49,7 +52,7 @@ const EventPage = () => {
                       <CalendarDays /> {event?.date}
                   </p>
                   <p className="flex items-center gap-4 text-xl">
-                      <Clock8 /> {event?.time}
+                      <Clock8 size={20}/> {event?.time}
                   </p>
                   <p className="flex items-center gap-4 text-xl">
                       <Users /> {event?.members} members

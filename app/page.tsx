@@ -28,7 +28,7 @@ const Page = () => {
 						textShadow: "0 0 10px white, 0 0 10px white, 0 0 20px white"
 					}}
 				>
-					' 25
+					{`' 25`}
 				</p>
 			</div>
 			<p
@@ -41,7 +41,9 @@ const Page = () => {
 					<span className="dot animate-wave-delay3 text-4xl max-md:text-2xl">.</span>
 				</span>
 			</p>
-			<p className="font-medium text-xl text-center mx-4">"We won't stop until ISTA reaches where vision meets infinity."</p>
+			<p className="font-medium text-xl text-center mx-4">
+				{`"We won't stop until ISTA reaches where vision meets infinity."`}
+			</p>
 		</div>
 		
 		<Navbar style="w-[50%] max-md:w-full fixed bottom-4 md:right-0 max-md:bottom-0"/>
@@ -50,3 +52,5 @@ const Page = () => {
 };
 
 export default Page;
+
+//Order change home - about - events -contact
